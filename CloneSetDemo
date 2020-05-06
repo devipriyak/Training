@@ -1,0 +1,25 @@
+import java.util.*;
+
+ class CloneSetDemo {
+   public static void main(String args[]) {
+      
+      // create two hash sets     
+      HashSet <String> hs = new HashSet <String>();
+      HashSet <String> cloneset = new HashSet <String>();
+
+      // populate hash set
+      hs.add("C"); 
+      hs.add("Java");
+      hs.add("DBMS");  
+
+      // clone the hash set
+      cloneset = (HashSet)hs.clone();
+
+      System.out.println("Hash set values: "+ hs);      
+      System.out.println("Clone Hash set values: "+ cloneset);
+      cloneset.add("Python");
+      System.out.println("Hash set values: "+ hs);      
+      System.out.println("Clone Hash set values: "+ cloneset);
+      
+   }    
+}

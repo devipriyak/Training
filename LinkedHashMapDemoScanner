@@ -1,0 +1,63 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lcollectiondemo;
+
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeMap;
+
+/**
+ *
+ * @author Admin
+ */
+public class LinkedHashMapDemo {
+
+   
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Map<Integer,Double> m=new LinkedHashMap<Integer,Double>();
+        Scanner s=new Scanner(System.in);
+        System.out.println("How many elements want to add in Hash Map and Tree Map");
+       int n=s.nextInt();
+       System.out.println("Enter key and values");
+       for(int i=0;i<n;i++)
+       {
+           int key=s.nextInt();
+           double value=s.nextDouble();
+        m.put(key,value);
+       }
+        System.out.println("Linked HashMap"+m);
+        TreeMap<Integer,Double> tm=new TreeMap<Integer,Double>();//Sorted Order
+        tm.put(11,1000000.0);
+        tm.put(03,2000000.0);
+        tm.put(02, 3000000.0);
+        System.out.println("TreeMap"+tm);
+        //traverse
+        //Set<Entry<Integer,Double>> e s=tm.entrySet();
+        //Set<Map.Entry<K,V>> entrySet()
+        //Get all Keys
+       /*System.out.println("Keys in Tree Map");
+        for (int i:tm.keySet()) {
+            System.out.println(i);
+        }*/
+       
+        System.out.println("Keys and values");
+        
+        Set<Map.Entry<Integer,Double>> e=tm.entrySet();
+        for(Map.Entry me:e)
+        {
+            System.out.println(me.getKey()+" "+me.getValue());
+            
+        }
+        //System.out.println(tm.firstKey());
+    }
+    }
+    
+

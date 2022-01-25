@@ -1,0 +1,31 @@
+<HTML>
+<BODY>
+<FORM NAME="N1" >
+Name<input type ="text" name="t1"><br>
+PhoneNo<input type ="text" name="t2"><br>
+<input type="button" name="s"    onclick="validateUserName()"      value="validateUserName">
+<input type="button" name="s1"   onclick="validatePhoneNumber()"  value="validatePhoneNUmber">
+<br>
+</form>
+</body>
+<head>
+<script>
+function validateUserName(){
+username=N1.t1.value;
+  var usernameRegex = /^[a-zA-Z0-9][0-9][a-zA-Z]+$/;
+   alert(usernameRegex.test(username));
+
+}
+function validatePhoneNumber()
+{
+phoneno=N1.t2.value;
+  var phoneRegex = /^[0-9]{10}$/;
+   alert(phoneRegex.test(phoneno));
+
+}
+
+</script>
+</head>
+</html>
+
+
